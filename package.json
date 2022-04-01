@@ -1,0 +1,36 @@
+{
+  "name": "@stdlib/math-strided-ops-mul",
+  "version": "0.0.0",
+  "description": "Element-wise multiplication of two strided arrays.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/math-strided-ops-mul.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "product",
+    "prod",
+    "multiply",
+    "multiplication",
+    "arithmetic",
+    "vector",
+    "array",
+    "strided",
+    "ndarray",
+    "element-wise"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
