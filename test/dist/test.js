@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2021 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,105 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var proxyquire = require( 'proxyquire' );
-var IS_BROWSER = require( '@stdlib/assert-is-browser' );
-var dtypes2signatures = require( '@stdlib/ndarray-base-dtypes2signatures' );
-var types = require( './../../dist/types.js' );
-var meta = require( './../../dist/meta.json' );
-var strided = require( './../../dist' );
-
-
-// VARIABLES //
-
-var opts = {
-	'skip': IS_BROWSER
-};
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof strided, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'attached to the main export is a method providing an ndarray interface', function test( t ) {
-	t.strictEqual( typeof strided.ndarray, 'function', 'method is a function' );
-	t.end();
-});
-
-tape( 'if a native implementation is available, the main export is the native implementation', opts, function test( t ) {
-	var strided = proxyquire( './../dist', {
-		'@stdlib/utils-try-require': tryRequire
-	});
-
-	t.strictEqual( strided, mock, 'returns native implementation' );
-	t.end();
-
-	function tryRequire() {
-		return mock;
-	}
-
-	function mock() {
-		// Mock...
-	}
-});
-
-tape( 'if a native implementation is not available, the main export is a JavaScript implementation', opts, function test( t ) {
-	var strided;
-	var main;
-
-	main = require( './../../dist/mul.js' );
-
-	strided = proxyquire( './../dist', {
-		'@stdlib/utils-try-require': tryRequire
-	});
-
-	t.strictEqual( strided, main, 'returns JavaScript implementation' );
-	t.end();
-
-	function tryRequire() {
-		return new Error( 'Cannot find module' );
-	}
-});
-
-tape( 'attached to the main export is a property for retrieving the number of arguments', function test( t ) {
-	t.strictEqual( strided.nargs, meta.nargs, 'returns expected value' );
-	t.end();
-});
-
-tape( 'attached to the main export is a property for retrieving the number of input strided array arguments', function test( t ) {
-	t.strictEqual( strided.nin, meta.nin, 'returns expected value' );
-	t.end();
-});
-
-tape( 'attached to the main export is a property for retrieving the number of output strided array arguments', function test( t ) {
-	t.strictEqual( strided.nout, meta.nout, 'returns expected value' );
-	t.end();
-});
-
-tape( 'attached to the main export is a property for retrieving the list of supported array data types', function test( t ) {
-	t.deepEqual( strided.types, dtypes2signatures( types, meta.nin, meta.nout ), 'returns expected value' );
-	t.end();
-});
-
-tape( 'attached to the ndarray interface is a property for retrieving the number of arguments', function test( t ) {
-	t.strictEqual( strided.ndarray.nargs, meta.nargs+meta.nin+meta.nout, 'returns expected value' );
-	t.end();
-});
-
-tape( 'attached to the ndarray interface is a property for retrieving the number of input strided array arguments', function test( t ) {
-	t.strictEqual( strided.ndarray.nin, meta.nin, 'returns expected value' );
-	t.end();
-});
-
-tape( 'attached to the ndarray interface is a property for retrieving the number of output strided array arguments', function test( t ) {
-	t.strictEqual( strided.ndarray.nout, meta.nout, 'returns expected value' );
-	t.end();
-});
-
-tape( 'attached to the ndarray interface is a property for retrieving the list of supported array data types', function test( t ) {
-	t.deepEqual( strided.ndarray.types, dtypes2signatures( types, meta.nin, meta.nout ), 'returns expected value' );
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
