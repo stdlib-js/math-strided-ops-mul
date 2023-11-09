@@ -217,6 +217,13 @@ for ( i = 0; i < dt.length; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/math-strided/ops/add`][@stdlib/math/strided/ops/add]</span><span class="delimiter">: </span><span class="description">element-wise addition of two strided arrays.</span>
+-   <span class="package-name">[`@stdlib/math-strided/ops/sub`][@stdlib/math/strided/ops/sub]</span><span class="delimiter">: </span><span class="description">element-wise subtraction of two strided arrays.</span>
+
 </section>
 
 <!-- /.related -->
@@ -293,6 +300,14 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
 [@stdlib/strided/dtypes]: https://github.com/stdlib-js/strided-dtypes
+
+<!-- <related-links> -->
+
+[@stdlib/math/strided/ops/add]: https://github.com/stdlib-js/math-strided-ops-add
+
+[@stdlib/math/strided/ops/sub]: https://github.com/stdlib-js/math-strided-ops-sub
+
+<!-- </related-links> -->
 
 </section>
 
