@@ -43,19 +43,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-strided-ops-mul
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-strided-ops-mul/tags). For example,
-
-```javascript
-import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@v0.2.0-esm/index.mjs';
+var mul = require( '@stdlib/math-strided-ops-mul' );
 ```
 
 #### mul( N, dtypeX, x, strideX, dtypeY, y, strideY, dtypeZ, z, strideZ )
@@ -63,7 +76,7 @@ import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@v0.2
 Multiplies each element in a strided array `x` to a corresponding element in a strided array `y` and assigns the results to elements in a strided array `z`.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ -2.0, 1.0, 3.0, -5.0, 4.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
@@ -89,7 +102,7 @@ The function accepts the following arguments:
 The `N` and stride parameters determine which elements in the strided arrays are accessed at runtime. For example, to index every other value in `x` and the first `N` elements of `y` in reverse order,
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
@@ -102,7 +115,7 @@ mul( 3, 'float64', x, 2, 'float64', y, -1, 'float64', z, 1 );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 // Initial arrays...
 var x0 = new Float64Array( [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0 ] );
@@ -123,7 +136,7 @@ mul( 3, 'float64', x1, -2, 'float64', y1, 1, 'float64', z1, 1 );
 Multiplies each element in a strided array `x` to a corresponding element in a strided array `y` and assigns the results to elements in a strided array `z` using alternative indexing semantics.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ -2.0, 1.0, 3.0, -5.0, 4.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
@@ -142,7 +155,7 @@ The function accepts the following additional arguments:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the offset parameters support indexing semantics based on starting indices. For example, to index every other value in `x` starting from the second value and to index the last `N` elements in `y` in reverse order,
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ -2.0, 1.0, 3.0, -5.0, 4.0, 0.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
@@ -168,16 +181,11 @@ mul.ndarray( 3, 'float64', x, 2, 1, 'float64', y, -1, y.length-1, 'float64', z, 
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@esm/index.mjs';
+```javascript
+var uniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var filledarray = require( '@stdlib/array-filled' );
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var mul = require( '@stdlib/math-strided-ops-mul' );
 
 var dt;
 var x;
@@ -201,10 +209,6 @@ for ( i = 0; i < dt.length; i++ ) {
     console.log( z );
     console.log( '' );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -235,7 +239,7 @@ for ( i = 0; i < dt.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -265,8 +269,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-strided-ops-mul.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-strided-ops-mul
 
-[test-image]: https://github.com/stdlib-js/math-strided-ops-mul/actions/workflows/test.yml/badge.svg?branch=v0.2.0
-[test-url]: https://github.com/stdlib-js/math-strided-ops-mul/actions/workflows/test.yml?query=branch:v0.2.0
+[test-image]: https://github.com/stdlib-js/math-strided-ops-mul/actions/workflows/test.yml/badge.svg?branch=v0.2.1
+[test-url]: https://github.com/stdlib-js/math-strided-ops-mul/actions/workflows/test.yml?query=branch:v0.2.1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-strided-ops-mul/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-strided-ops-mul?branch=main
@@ -300,13 +304,13 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/strided/dtypes]: https://github.com/stdlib-js/strided-dtypes/tree/esm
+[@stdlib/strided/dtypes]: https://github.com/stdlib-js/strided-dtypes
 
 <!-- <related-links> -->
 
-[@stdlib/math/strided/ops/add]: https://github.com/stdlib-js/math-strided-ops-add/tree/esm
+[@stdlib/math/strided/ops/add]: https://github.com/stdlib-js/math-strided-ops-add
 
-[@stdlib/math/strided/ops/sub]: https://github.com/stdlib-js/math-strided-ops-sub/tree/esm
+[@stdlib/math/strided/ops/sub]: https://github.com/stdlib-js/math-strided-ops-sub
 
 <!-- </related-links> -->
 
