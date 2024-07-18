@@ -41,8 +41,8 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/math-base-ops-cmul": "^0.2.1",
-    "@stdlib/math-base-ops-cmulf": "^0.2.1",
+    "@stdlib/complex-float32-base-mul": "github:stdlib-js/complex-float32-base-mul#main",
+    "@stdlib/complex-float64-base-mul": "github:stdlib-js/complex-float64-base-mul#main",
     "@stdlib/math-base-ops-mul": "^0.2.1",
     "@stdlib/math-base-ops-mulf": "^0.2.1",
     "@stdlib/strided-base-binary": "^0.2.1",
