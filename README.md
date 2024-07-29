@@ -50,6 +50,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-strided-ops-mul/tags). For example,
+
+```javascript
 import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@v0.2.2-esm/index.mjs';
 ```
 
@@ -172,7 +177,7 @@ mul.ndarray( 3, 'float64', x, 2, 1, 'float64', y, -1, y.length-1, 'float64', z, 
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@v0.2.2-esm/index.mjs';
+import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@esm/index.mjs';
 
 var dt;
 var x;
