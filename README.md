@@ -50,7 +50,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@esm/index.mjs';
+import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@v0.2.2-esm/index.mjs';
 ```
 
 #### mul( N, dtypeX, x, strideX, dtypeY, y, strideY, dtypeZ, z, strideZ )
@@ -172,7 +172,7 @@ mul.ndarray( 3, 'float64', x, 2, 1, 'float64', y, -1, y.length-1, 'float64', z, 
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@esm/index.mjs';
+import mul from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-mul@v0.2.2-esm/index.mjs';
 
 var dt;
 var x;
