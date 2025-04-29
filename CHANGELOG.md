@@ -4,7 +4,19 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-17)
+## Unreleased (2025-04-29)
+
+<section class="issues">
+
+### Closed Issues
+
+This release closes the following issue:
+
+[#6808](https://github.com/stdlib-js/stdlib/issues/6808)
+
+</section>
+
+<!-- /.issues -->
 
 <section class="commits">
 
@@ -12,6 +24,7 @@
 
 <details>
 
+-   [`10afa3c`](https://github.com/stdlib-js/stdlib/commit/10afa3c844a1b99bbfec96620038be70e6f8c8de) - **style:** re-enable lint rule [(#6835)](https://github.com/stdlib-js/stdlib/pull/6835) _(by Lalit Narayan Yadav, Athan Reines)_
 -   [`1eac550`](https://github.com/stdlib-js/stdlib/commit/1eac550d7e113582faa355fe13dfbb24e02d9238) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`eecf3f4`](https://github.com/stdlib-js/stdlib/commit/eecf3f43ccd1e5702f95ed616bef8001ac6eb66c) - **refactor:** update paths _(by Gururaj Gurram)_
 
@@ -25,9 +38,11 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Gururaj Gurram
+-   Lalit Narayan Yadav
 
 </section>
 
