@@ -80,6 +80,7 @@
     "@stdlib/random-base-uniform": "^0.2.3",
     "@stdlib/strided-base-binary-addon-dispatch": "^0.3.1",
     "@stdlib/strided-base-dtype-resolve-str": "^0.2.3",
+    "@stdlib/string-format": "^0.2.3",
     "@stdlib/string-replace": "^0.2.3",
     "@stdlib/string-uppercase": "^0.3.1",
     "@stdlib/time-current-year": "^0.2.3",
